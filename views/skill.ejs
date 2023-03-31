@@ -1,0 +1,23 @@
+<%- include('header') -%>
+<div style="text-align: center;font-size: xxx-large;font-family: sans-serif;font-weight: bold;color: #f85c70;">MY SKILLS</div>
+<div style="margin: 5%;display: flex;flex-direction: row;flex-wrap: wrap;">
+    <% for(var i=0;i<allSkill.length;i++){ %>
+        <div style="margin: 15px;">
+        <p class="skillsItem"><%= allSkill[i].name %> </p>
+        <div style="width: 100px;height: 20px;border: 2px solid black;border-radius: 10px;"><div style="background-color: #f85c70;height: 100%;border-radius: 10px;" class="<%= allSkill[i].Confidence %>";>
+            <script>
+                  var x=parseInt("<%= allSkill[i].Confidence %>"); 
+                  for(var j=0;j<"<%= allSkill.length%>";j++){
+                    document.getElementsByClassName("<%= allSkill[i].Confidence %>")[0].style.width=x+"%";
+                  }
+                  
+            </script>
+        </div></div>
+        </div>
+    <% } %>
+</div>
+
+<div style="margin: 5%;">
+    <p style="cursor: pointer;margin-top: 10px;color: darkgrey;" onclick="location.href='/';">Go to Home Page <i class="fa-solid fa-arrow-right" style="color: #f85c70;"></i></p>
+</div>
+<%- include('footer') -%>

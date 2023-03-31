@@ -1,0 +1,8 @@
+<%- include('header') -%>
+<form action="/uploadProject" method="post" enctype="multipart/form-data">
+    <input type="text" name="projectName" placeholder="Type the name of your project"><br>
+    <input type="text" name="link" placeholder="paste the link of the project">
+    <input type="file" name="image" placeholder="Upload the image of the project">
+    <button type="submit">Submit</button>
+</form>
+<%- include('footer') -%>
